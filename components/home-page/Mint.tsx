@@ -1,8 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 import SectionTitle from "./SectionTitle";
 import Carousel from "./Carousel";
+import PrimaryButton from "../ui/PrimaryButton";
 import cloud from "@/public/images/home-page/how-to-buy/cloud.png";
 
 const Mint = () => {
@@ -16,12 +18,26 @@ const Mint = () => {
         <Carousel />
       </div>
 
-      <div className="px-container relative container mx-auto flex h-[750px] items-center justify-center">
-        <iframe
-          src="https://possum-rouge.vercel.app/"
-          title="Mint"
-          className="h-full outline-none focus:border-none focus:outline-none"
-        ></iframe>
+      <div className="text-dark container mx-auto mt-[2em] text-center">
+        <p className="text-[2em]">1000/1000 MINTED</p>
+
+        <div className="mt-[1em] flex flex-col justify-center gap-[1em] sm:flex-row">
+          <Link href="https://magiceden.io/marketplace/wtf_opossum">
+            <PrimaryButton
+              buttonText="Trade on Magic Eden"
+              className="w-[30ch] text-[1.4em] sm:text-[1.4em] md:text-[1.4em] lg:text-[1.4em] xl:text-[1.4em] 2xl:text-[1.4em]"
+              spanStyle="bg-[#FFFFEF]"
+            />
+          </Link>
+
+          <Link href="https://www.tensor.trade/trade/wtf_opossum">
+            <PrimaryButton
+              buttonText="Trade on Tensor"
+              className="w-[30ch] text-[1.4em] sm:text-[1.4em] md:text-[1.4em] lg:text-[1.4em] xl:text-[1.4em] 2xl:text-[1.4em]"
+              spanStyle="bg-[#FFFFEF]"
+            />
+          </Link>
+        </div>
       </div>
 
       <Image
